@@ -1,0 +1,21 @@
+--- Task 1: nodeName Pod ---
+NAME            READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+static-pinned   1/1     Running   0          28m   10.244.0.71   minikube   <none>           <none>
+
+--- Task 2: NodeSelector & Pending Status ---
+NAME            READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+selector-demo   1/1     Running   0          21m   10.244.0.72   minikube   <none>           <none>
+NAME               READY   STATUS    RESTARTS   AGE
+pending-selector   0/1     Pending   0          16m
+
+--- Task 3: NoExecute Eviction Proof ---
+
+--- Task 3: Taints & Tolerations ---
+
+--- Task 4: Node Affinity ---
+NAME            READY   STATUS    RESTARTS   AGE    IP             NODE       NOMINATED NODE   READINESS GATES
+affinity-demo   1/1     Running   0          9m3s   10.244.0.177   minikube   <none>           <none>
+
+--- Task 5: Pod Anti-Affinity ---
+NAME                 READY   STATUS    RESTARTS   AGE   IP       NODE     NOMINATED NODE   READINESS GATES
+anti-affinity-demo   0/1     Pending   0          21s   <none>   <none>   <none>           <none>
