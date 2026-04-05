@@ -1,21 +1,30 @@
---- Task 1: nodeName Pod ---
-NAME            READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
-static-pinned   1/1     Running   0          28m   10.244.0.71   minikube   <none>           <none>
 
---- Task 2: NodeSelector & Pending Status ---
-NAME            READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
-selector-demo   1/1     Running   0          21m   10.244.0.72   minikube   <none>           <none>
-NAME               READY   STATUS    RESTARTS   AGE
-pending-selector   0/1     Pending   0          16m
+--- Task 5: QoS Classes Verification ---
+affinity-demo	BestEffort
+anti-affinity-demo	BestEffort
+app1-5c8c5777bc-mwgls	BestEffort
+app2-69858d97b5-jtpxc	BestEffort
+app3-8c7dfd487-72vc7	BestEffort
+besteffort-pod	BestEffort
+burstable-pod	Burstable
+demo-7fb87548c-c2zd6	BestEffort
+demo-7fb87548c-hcr2c	BestEffort
+guaranteed-pod	Guaranteed
+node-monitor-tvbrg	BestEffort
+ready-demo-59df8d957f-4cflt	BestEffort
+ready-demo-59df8d957f-7xzxb	BestEffort
+static-nginx-minikube	BestEffort
+web-0	BestEffort
+web-1	BestEffort
+web-2	BestEffort
+webapp-configured-745db96564-47dmr	BestEffort
+webapp-configured-745db96564-c8d4n	BestEffort
+webapp-configured-745db96564-w6m92	BestEffort
 
---- Task 3: NoExecute Eviction Proof ---
+--- Task 6: DaemonSet ---
+NAME           DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+node-monitor   1         1         1       1            1           <none>          61m
+node-monitor-tvbrg                   1/1     Running   0             61m     10.244.0.181   minikube   <none>           <none>
 
---- Task 3: Taints & Tolerations ---
-
---- Task 4: Node Affinity ---
-NAME            READY   STATUS    RESTARTS   AGE    IP             NODE       NOMINATED NODE   READINESS GATES
-affinity-demo   1/1     Running   0          9m3s   10.244.0.177   minikube   <none>           <none>
-
---- Task 5: Pod Anti-Affinity ---
-NAME                 READY   STATUS    RESTARTS   AGE   IP       NODE     NOMINATED NODE   READINESS GATES
-anti-affinity-demo   0/1     Pending   0          21s   <none>   <none>   <none>           <none>
+--- Task 7: Static Pod Proof ---
+static-nginx-minikube                1/1     Running   0             46m     10.244.0.182   minikube   <none>           <none>
