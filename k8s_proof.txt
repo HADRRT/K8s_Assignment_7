@@ -1,3 +1,11 @@
+--- Task 1: nodeName Pod ---
+
+--- Task 2: NodeSelector & Pending Status ---
+Error from server (NotFound): pods "pending-selector" not found
+
+--- Task 3: NoExecute Eviction Proof ---
+
+--- Task 4: Node Affinity ---
 
 --- Task 5: QoS Classes Verification ---
 affinity-demo	BestEffort
@@ -23,8 +31,8 @@ webapp-configured-745db96564-w6m92	BestEffort
 
 --- Task 6: DaemonSet ---
 NAME           DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
-node-monitor   1         1         1       1            1           <none>          61m
-node-monitor-tvbrg                   1/1     Running   0             61m     10.244.0.181   minikube   <none>           <none>
+node-monitor   1         1         1       1            1           <none>          16h
+node-monitor-tvbrg                   1/1     Running   0             16h   10.244.0.181   minikube   <none>           <none>
 
 --- Task 7: Static Pod Proof ---
-static-nginx-minikube                1/1     Running   0             46m     10.244.0.182   minikube   <none>           <none>
+static-nginx-minikube                1/1     Running   0             16h   10.244.0.182   minikube   <none>           <none>
